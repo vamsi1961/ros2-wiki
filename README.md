@@ -34,6 +34,17 @@ A build tool is required. => colcon build
 
     use "pip3 install setuptools==58.2.0". if python is depreciating
 
+## Create a cpp package
 
+    ros2 pkg create <package_name> --build-type ament_cmake --dependencies rclcpp
+
+    In this include and src directory is present
+
+
+
+
+If you want to build only one package 
+
+    colcon build --packages-select my_cpp_pkg
 
 
