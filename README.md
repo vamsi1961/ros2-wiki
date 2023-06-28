@@ -28,7 +28,11 @@ A build tool is required. => colcon build
 
     ros2 pkg create <package_name> --build-type ament_python --dependencies rclpy
 
-    I main folder a package folder is created in that codes are written
+    ament_python => python package
+
+    Along with the package setup.py , setup.cfg, package.xml files. resources,test folders are created 
+
+    main folder a package folder is created in that codes are written
 
     test => test files are written. 
 
