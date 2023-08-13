@@ -1,4 +1,4 @@
-# PAckage :
+# Package :
 
 Packages are containers for the codes that we write. It is directory that contains the necessary files and resources for creating and mapping software components in ROS2.
 

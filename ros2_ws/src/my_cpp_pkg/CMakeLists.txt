@@ -8,6 +8,42 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(Curses REQUIRED)
+find_package(example_interfaces REQUIRED)
+find_package(my_robot_interfaces REQUIRED)
+
+add_executable(cpp_node src/my_first_node.cpp)
+ament_target_dependencies(cpp_node rclcpp)
+
+
+add_executable(cpp_node_class src/cpp_class_node.cpp)
+ament_target_dependencies(cpp_node_class rclcpp)
+
+add_executable(robot_news_station src/robot_news_station.cpp)
+ament_target_dependencies(robot_news_station rclcpp example_interfaces)
+
+add_executable(smartphone src/smartphone.cpp)
+ament_target_dependencies(smartphone rclcpp example_interfaces)
+
+add_executable(hw_status_publisher src/hw_status_publisher.cpp)
+ament_target_dependencies(hw_status_publisher rclcpp my_robot_interfaces)
+
+
+
+
+install(TARGETS 
+        cpp_node_class
+        cpp_node
+        robot_news_station
+        smartphone
+        hw_status_publisher
+
+        DESTINATION lib/${PROJECT_NAME}
+        )
+
+
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
