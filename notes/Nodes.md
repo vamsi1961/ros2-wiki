@@ -21,7 +21,7 @@
 
 * Create file
 
-    touch my_first_node.py
+        touch my_first_node.py
 
 * Basic python node
 
@@ -53,8 +53,70 @@
             # at the end shutdown
             rclpy.shutdown()
 
-if __name__ == "__main__":
-    main()
+        if __name__ == "__main__":
+            main()
+
+
+* Setup in an executable
+
+    * Inform ros2 to make exetuable and specify it in entry point to the program. Update `entry_point` in the `setup.py` file
+
+            entry_points={
+                'console_scripts': [
+                    "py_node = my_py_pkg.my_first_node:main"
+                                    ],
+                        }
+
+    * `py_node` is the name of the new node executable 
+    * It will be installed in `ros2_ws/src/install/my_py_pkg/lib/my_py_pkg/py_node` location  
+
+* Make it an executable
+    * `chmod +x my_first_node.py`
+
+### Run Program
+
+* After creating node, making it executable.
+* Do `colcon build` in `src` directory. 
+    * Now node is ready to run
+
+* Source the current ros2 environment by running following command from the `src` dirctory
+
+        source ./install/setup.bash
+
+    * It will source your current workspace
+
+* Run the node 
+
+        ros2 run my_py_pkg py_node
+
+* `py_node` is the node name which we gave in `setup.py`. 
+
+## Python Node with Oops
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Tasks
 
