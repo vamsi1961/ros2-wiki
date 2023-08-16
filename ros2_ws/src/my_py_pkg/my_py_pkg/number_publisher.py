@@ -2,13 +2,21 @@ import rclpy
 from rclpy.node import Node
 from example_interfaces.msg import Int64
 
-class MyCustomNode(Node): # MODIFY NAME
+class MyCustomNode(Node):
 
     def __init__(self):
-        super().__init__("number_publisher") # MODIFY NAME
-        self.number_ = 2
+        super().__init__("number_publisher")
+        self.declare_parameter("number_to_publish",2)
+        self.declare_parameter("publish_frequency",1.0) 
+        # 2 is default value
+
+
+        # declared paramers to modify during run
+        self.number_ = self.get_parameter("number_to_publish").value
+        self.publish_frequency_ = self.get_parameter("publish_frequency").value
+
         self.number_publisher_ = self.create_publisher(Int64, "number",10)
-        self.number_timer_ = self.create_timer(1.0, self.publish_number)
+        self.number_timer_ = self.create_timer(1.0/self.publish_frequency_, self.publish_number)
         self.get_logger().info("Number publisher has been started.")
 
     def publish_number(self):
