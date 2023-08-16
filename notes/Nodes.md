@@ -93,7 +93,30 @@
 
 ## Python Node with Oops
 
+* Makes node more scalable
 
+
+        import rclpy
+        from rclpy.node import Node
+
+        class MyCustomNode(Node): # MODIFY NAME
+
+            def __init__(self):
+                super().__init__("node_name")
+                self.get_logger().info("This is Oops Node")
+
+
+
+        def main(args = None):
+
+            rclpy.init(args=args)
+            node = MyCustomNode()
+            rclpy.spin(node)
+            rclpy.shutdown()
+
+
+        if __name__ == "__main__":
+            main()
 
 
 
