@@ -119,9 +119,24 @@
             main()
 
 
+### Remapping Node
+
+* `--ros-args` flag 
+* `--rmap` or `-r` to rename
+
+* `ros2 run my_py_pkg my_oops_node --ros-args --rmap __node:=my_oops_node1`
+
+* Change node in run. It doesn't affect original node.
 
 
 
+
+
+**NOTE** : 
+
+* It is fine to create multiple duplicate nodes.
+* Keep track in the rqt and `ros2 node list`.
+* If same name is used more than once it may cause unintentional errors.
 
 
 
