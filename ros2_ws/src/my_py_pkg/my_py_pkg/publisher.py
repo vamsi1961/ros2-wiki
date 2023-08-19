@@ -5,7 +5,7 @@
 import rclpy
 from rclpy.node import Node
 from example_interfaces.msg import String
-from std_msgs.msg import Empty
+
 # this contains message types
 
 class Pub(Node):
@@ -13,7 +13,12 @@ class Pub(Node):
     def __init__(self):
         self.counter_ = 0
         super().__init__("publisher")
-        self.publisher_ = self.create_publisher(Empty , "data" , 10)
+
+        self.declare_parameter("pub","value")
+        self.data_ = self.get_parameter("pub").value
+
+
+        self.publisher_ = self.create_publisher(String , "data" , 10)
         self.timer = self.create_timer(0.5 , self.publish)
         self.get_logger().info(" Publishing started")
 
@@ -23,7 +28,7 @@ class Pub(Node):
        
 
     def publish(self):
-        msg = Empty()
+        msg = String()
         
         self.publisher_.publish(msg)
 

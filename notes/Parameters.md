@@ -12,3 +12,28 @@
 
 * `ros2 run pkg_name node_name --ros-args -p param_name_1:=data_1 -p param_name_2:=data_2`
     * `-p` to change the parameter `param_name`
+
+## Chnaging parameters in cpp node.
+
+### CPP
+
+* Declare in private
+    * say int, int number_;
+* `this->declare_parameter("parameter",data);`
+* number_ = `this->declare_parameter("parameter").as_int();`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
