@@ -22,3 +22,27 @@ ros2 run my_py_pkg my_oops_node --ros-args --rmap __node:=my_oops_node2
 
 * make sure only one node works at a time. 
 * Same node names causes errors.
+## Chnaging parameters in cpp node.
+
+### CPP
+
+* Declare in private
+    * say int, int number_;
+* `this->declare_parameter("parameter",data);`
+* number_ = `this->declare_parameter("parameter").as_int();`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

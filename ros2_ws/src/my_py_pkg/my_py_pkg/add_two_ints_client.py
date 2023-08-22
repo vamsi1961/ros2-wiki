@@ -9,6 +9,7 @@ class AddTwoIntsClientNode(Node): # MODIFY NAME
         super().__init__("add_two_ints_client") # MODIFY NAME
         self.call_add_two_ints_server(6,7)
 
+
     def call_add_two_ints_server(self,a,b):
         # we will create a cliet, we create the request, 
         # we call the server and also then see how we can wait fot the response 
@@ -25,8 +26,8 @@ class AddTwoIntsClientNode(Node): # MODIFY NAME
             self.get_logger().warn("Waiting for server Add For Two Ints ....")
         request = AddTwoInts.Request()
 
-        request.a = 3
-        request.b = 8
+        request.a = a
+        request.b = b
 
         future = client.call_async(request)
 
