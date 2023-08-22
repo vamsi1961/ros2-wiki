@@ -12,3 +12,13 @@
 
 * `ros2 run pkg_name node_name --ros-args -p param_name_1:=data_1 -p param_name_2:=data_2`
     * `-p` to change the parameter `param_name`
+
+* Renaming node
+
+```bash
+ros2 run my_py_pkg my_oops_node --ros-args --rmap __node:=my_oops_node1
+ros2 run my_py_pkg my_oops_node --ros-args --rmap __node:=my_oops_node2
+```
+
+* make sure only one node works at a time. 
+* Same node names causes errors.
