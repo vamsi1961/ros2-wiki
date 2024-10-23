@@ -1,0 +1,44 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/kishore/Desktop/Turtlesim/install/my_robot_interfaces/include/**",
+        "/home/kishore/nav2_ws/install/nav2_waypoint_follower/include/**",
+        "/home/kishore/nav2_ws/install/nav2_theta_star_planner/include/**",
+        "/home/kishore/nav2_ws/install/nav2_smoother/include/**",
+        "/home/kishore/nav2_ws/install/nav2_regulated_pure_pursuit_controller/include/**",
+        "/home/kishore/nav2_ws/install/nav2_planner/include/**",
+        "/home/kishore/nav2_ws/install/nav2_navfn_planner/include/**",
+        "/home/kishore/nav2_ws/install/nav2_controller/include/**",
+        "/home/kishore/nav2_ws/install/nav2_constrained_smoother/include/**",
+        "/home/kishore/nav2_ws/install/nav2_bt_navigator/include/**",
+        "/home/kishore/nav2_ws/install/nav2_core/include/**",
+        "/home/kishore/nav2_ws/install/nav2_collision_monitor/include/**",
+        "/home/kishore/nav2_ws/install/nav2_costmap_2d/include/**",
+        "/home/kishore/nav2_ws/install/nav2_voxel_grid/include/**",
+        "/home/kishore/nav2_ws/install/nav2_velocity_smoother/include/**",
+        "/home/kishore/nav2_ws/install/nav2_rviz_plugins/include/**",
+        "/home/kishore/nav2_ws/install/nav2_map_server/include/**",
+        "/home/kishore/nav2_ws/install/nav2_lifecycle_manager/include/**",
+        "/home/kishore/nav2_ws/install/nav2_behavior_tree/include/**",
+        "/home/kishore/nav2_ws/install/nav2_amcl/include/**",
+        "/home/kishore/nav2_ws/install/nav2_util/include/**",
+        "/home/kishore/nav2_ws/install/nav2_msgs/include/**",
+        "/home/kishore/voidwalking/ros2_ws/install/spatio_temporal_voxel_layer/include/**",
+        "/home/kishore/voidwalking/ros2_ws/install/mapping/include/**",
+        "/opt/ros/humble/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
